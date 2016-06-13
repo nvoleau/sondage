@@ -45,6 +45,20 @@
   <script src="/webpack-dev-server.js"></script>
 <% } %>
 
+ <!-- pulling in firebase... -->  
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    //https://webcake.co/using-firebase-3-in-angular-2-and-ionic-2/
+    var config = {
+      apiKey: "AIzaSyDQ-6whj_lM2QIfGh6rAyAS0JI1aBOMwVU",
+    authDomain: "pv-election.firebaseapp.com",
+    databaseURL: "https://pv-election.firebaseio.com",
+    storageBucket: "pv-election.appspot.com",
+    };
+    firebase.initializeApp(config);
+  </script>
+
 <link
   href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900&subset=latin,greek,greek-ext,vietnamese,cyrillic-ext,latin-ext,cyrillic'
   rel='stylesheet' type='text/css'>
