@@ -1,0 +1,23 @@
+<div class="widgets">
+
+  <div class="row">
+    <div class="col-lg-6 col-md-12">
+      <ba-card title="Hover Rows" baCardClass="with-scroll table-panel">
+   <div class="table-responsive">
+  <table class="table">
+     
+                <tr *ngFor="#todo of todos" >
+                    <td>{{ todo.adresse}}</td>
+                    <td>{{ todo.nom }}</td>
+
+                    <td>
+                        <button type="button" class="btn btn-primary" (click)="selectTodo(todo)">Sonder</button>
+                    </td>
+                </tr>
+            
+        </table>
+     </div>
+      </ba-card>
+    </div>
+  </div>
+</div>

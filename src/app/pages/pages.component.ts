@@ -10,6 +10,7 @@ import {Charts} from './charts';
 import {Forms} from './forms';
 import {Tables} from './tables';
 import {Sondage} from './sondage';
+import {TableEnquete} from './table-enquete';
 
 @Component({
   selector: 'pages',
@@ -46,6 +47,11 @@ import {Sondage} from './sondage';
     component: Dashboard,
     path: '/dashboard',
     useAsDefault: true,
+  },
+  {
+    name: 'TableEnquete',
+    component: TableEnquete,
+    path: '/tableenquete'
   },
   {
     name: 'Ui',

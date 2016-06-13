@@ -110,7 +110,14 @@ export const menuItems = [
     component: 'Sondage',
     selected: false,
     expanded: false,
-    order: 650
+    order: 100
+  },
+   {
+    title: 'Tableau',
+    component: 'TableEnquete',
+    selected: false,
+    expanded: false,
+    order: 150
   },
   {
     title: 'Menu Level 1',
