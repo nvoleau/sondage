@@ -6,9 +6,9 @@
    <div class="table-responsive">
   <table class="table">
      
-                <tr *ngFor="#todo of todos" >
-                    <td>{{ todo.adresse}}</td>
-                    <td>{{ todo.nom }}</td>
+                <tr *ngFor="let todo of todos" >
+                    <td>{{ todo.adresse}} </td>
+                    <td>{{ todo.nom }} </td>
 
                     <td>
                         <button type="button" class="btn btn-primary" (click)="selectTodo(todo)">Sonder</button>

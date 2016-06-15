@@ -10,17 +10,32 @@ import {Todo} from './todo';
 import {Calendar} from './calendar';
 import {BaCard} from '../../theme/components';
 
+import {ChartistJsService} from './chartistJs.service';
+import {BaChartistChart} from '../../theme/components';
+
+
 @Component({
   selector: 'dashboard',
   pipes: [],
-  directives: [PopularApp, PieChart, TrafficChart, UsersMap, LineChart, Feed, Todo, Calendar, BaCard],
+  providers: [ChartistJsService],
+  directives: [PopularApp, PieChart, TrafficChart, UsersMap, LineChart, Feed, Todo, Calendar, BaCard,BaChartistChart],
   encapsulation: ViewEncapsulation.None,
-  styles: [require('./dashboard.scss')],
+  styles: [require('./dashboard.scss'),require('chartist/dist/chartist.css'), require('./chartistJs.scss')],
   template: require('./dashboard.html')
 })
 export class Dashboard {
 
-  constructor() {
+    data:any;
+
+  constructor(private _chartistJsService:ChartistJsService) {
   }
 
+ngOnInit() {
+    this.data = this._chartistJsService.getAll();
+  }
+
+  getResponsive(padding, offset) {
+    return this._chartistJsService.getResponsive(padding, offset);
+  }
+  
 }

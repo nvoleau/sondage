@@ -33,7 +33,7 @@ export class TableEnquete {
   selectTodo(todo: any) {
       console.log(todo);
       console.log(this.router);
-        this.router.navigate(['sondage',{nom: todo.nom, adresse: todo.adresse}]);
+        this.router.parent.navigate(['Sondage',{nom: todo.nom, adresse: todo.adresse}]);
        // this.msgs = [];
        // this.msgs.push({severity:'info', summary:'Car Select', detail:'Vin: ' + car.vin});
     }

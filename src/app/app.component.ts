@@ -10,6 +10,7 @@ import {BaThemeRun} from './theme/directives';
 import {BaImageLoaderService, BaThemePreloader, BaThemeSpinner} from './theme/services';
 
 import {layoutPaths} from './theme/theme.constants';
+import {Auth} from './pages/auth';
 
 /*
  * App Component

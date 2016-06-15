@@ -34,6 +34,11 @@ import '@angular2-material/progress-bar';
 import '@angular2-material/progress-circle';
 import '@angular2-material/toolbar';**/
 
+
+import 'angular2-jwt';
+
+//import 'leaflet.heat';
+
 if ('production' === ENV) {
   // Production
 

@@ -12,7 +12,7 @@ export class PieChartService {
     return [
       {
         color: pieColor,
-        description: 'New Visits',
+        description: 'Portes Ouvertes',
         stats: '57,820',
         icon: 'person',
       }, {
