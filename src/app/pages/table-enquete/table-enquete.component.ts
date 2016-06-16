@@ -11,11 +11,13 @@ import {Observer} from 'rxjs/Observer';
 import {EnqueteService} from '../../service/enqueteservice';
 import {Afaire} from '../../service/afaire';
 
+import {DataTable,Column} from 'primeng/primeng';
+
 @Component({
   selector: 'result',
   pipes: [],
   styles: [],
-  directives:[BaCard],
+  directives:[BaCard,DataTable,Column],
   providers:[EnqueteService,HTTP_PROVIDERS],
   template: require('./tableenquete.html'),
 })

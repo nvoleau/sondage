@@ -10,14 +10,15 @@
 
   <div class="user-profile clearfix">
     <div class="dropdown al-user-profile">
-      <a class="profile-toggle-link dropdown-toggle" id="user-profile-dd" data-toggle="dropdown" aria-expanded="false">
+       <a (click)="auth.login()" *ngIf="!auth.authenticated()">Log In</a>
+      <a *ngIf="auth.authenticated()" class="profile-toggle-link dropdown-toggle" id="user-profile-dd" data-toggle="dropdown" aria-expanded="false">
         <img src="{{ ( 'Nasta' | baProfilePicture ) }}">
       </a>
-      <div class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="user-profile-dd">
+      <div *ngIf="auth.authenticated()"  class="dropdown-menu top-dropdown-menu profile-dropdown" aria-labelledby="user-profile-dd">
         <li class="dropdown-item"><i class="dropdown-arr"></i></li>
         <li class="dropdown-item"><a href="#/profile"><i class="fa fa-user"></i>Profile</a></li>
         <li class="dropdown-item"><a href><i class="fa fa-cog"></i>Settings</a></li>
-        <li class="dropdown-item"><a href class="signout"><i class="fa fa-power-off"></i>Sign out</a></li>
+        <li class="dropdown-item"><a (click)="auth.logout()" class="signout"><i class="fa fa-power-off"></i>Sign out</a></li>
       </div>
     </div>
     <ba-msg-center></ba-msg-center>

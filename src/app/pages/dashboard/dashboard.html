@@ -1,4 +1,31 @@
 <div class="row">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <ba-card title="Classement" class="col-xlg-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+      <div class="description">
+        <div class="description-stats">{{classement_moi}}</div>
+        <div class="description-stats">sur {{classement_total}}</div>
+  </div>
+  </ba-card>
+    <ba-card title="Sondés" class="col-xlg-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+      <div class="description">
+          <div class="description-stats">{{sonde_pourcent}}%</div>
+        <div class="description-stats">{{sonde_total}} votants</div>
+      </div>
+    </ba-card>
+    <ba-card title="Par moi" class="col-xlg-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+      <div class="description">
+        <div class="description-stats">{{sonde_pourcent_moi}}%</div>
+        <div class="description-stats">{{sonde_total_moi}} votants</div>
+      </div>
+    </ba-card>
+  <ba-card title="Moyenne par Militant" class="col-xlg-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+    <div class="description">
+      <div class="description-stats">{{sonde_moy}}</div>
+      <div class="description-stats">votants</div>
+    </div>
+  </ba-card>
+  </div>
+</div><div class="row">
     <div class="col-md-12">
       <ba-card title="Mes statistiques" baCardClass="with-scroll">
         <div class="row">

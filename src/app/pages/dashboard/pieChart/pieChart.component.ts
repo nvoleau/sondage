@@ -52,10 +52,13 @@ export class PieChart {
   }
 
   private _updatePieCharts() {
-    let getRandomArbitrary = (min, max) => { return Math.random() * (max - min) + min };
+    //let getRandomArbitrary = (min, max) => { return Math.random() * (max - min) + min };
 
-    $('.pie-charts .chart').each(function(index, chart) {
-      $(chart).data('easyPieChart').update(getRandomArbitrary(55, 90));
-    });
+
+   // $('.pie-charts .chart').each(function(index, chart) {
+     // console.log('-----------');
+      //console.log(chart);
+      //$(chart).data('easyPieChart').update(chart.pourcentage);
+  //  });
   }
 }

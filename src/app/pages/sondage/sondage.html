@@ -1,98 +1,113 @@
 <div class="widgets">
-<form>
-  <div class="row">
-    <div class="col-md-6">
-      <ba-card title="Identité" baCardClass="with-scroll">
-       
-            <div class="form-group">
-                <label>Nom</label>
-                <input type="text" class="form-control" [(ngModel)]="sondage.nom" placeholder="Nom">
-            </div>
-            <div class="form-group">
-                <label>Prenom</label>
-                <input type="text" class="form-control" [(ngModel)]="sondage.prenom" placeholder="Prenom">
-            </div>
+  <form>
+    <div class="row">
+      <div class="col-md-6">
+        <ba-card title="Identité" baCardClass="with-scroll">
 
-            <div>
-                <md-radio-group [(ngModel)]="sondage.sexe">
-                <md-radio-button *ngFor="let o of sexe" [value]="o.value">
-                    {{ o.label }} <br>
-                </md-radio-button> 
-                </md-radio-group>
-            </div>
+          <div class="form-group">
+            <label>Nom</label>
+            <input type="text" class="form-control" [(ngModel)]="sondage.nom" placeholder="Nom">
+          </div>
+          <div class="form-group">
+            <label>Prenom</label>
+            <input type="text" class="form-control" [(ngModel)]="sondage.prenom" placeholder="Prenom">
+          </div>
 
-            <div class="form-group">
-                <label>Adresse</label>
-                <input type="text" class="form-control" [(ngModel)]="sondage.rue" placeholder="Adresse">
-            </div>
-            <div class="form-group">
-                <label>Etage</label>
-                <input type="text" class="form-control" [(ngModel)]="sondage.etage" placeholder="Etage">
-            </div>
-            <div class="form-group">
-                <label>Numero Appartement</label>
-                <input type="text" class="form-control" [(ngModel)]="sondage.appart" placeholder="Numéro Appartement">
-            </div>
 
-            <div class="form-group">
-            <label>Ouverture : </label> <p-selectButton [options]="open" [(ngModel)]="sondage.open"></p-selectButton><br><br>
-            </div>
-            
-            <div class="button-wrapper">
+          <div>
+            <md-radio-group [(ngModel)]="sondage.sexe">
+              <md-radio-button *ngFor="let o of sexe" [value]="o.value">
+                {{ o.label }} <br>
+              </md-radio-button>
+            </md-radio-group>
+          </div>
+
+          <div class="form-group">
+            <label>Adresse</label>
+            <input type="text" class="form-control" [(ngModel)]="sondage.rue" placeholder="Adresse">
+          </div>
+          <div class="form-group">
+            <label>Etage</label>
+            <input type="text" class="form-control" [(ngModel)]="sondage.etage" placeholder="Etage">
+          </div>
+          <div class="form-group">
+            <label>Numero Appartement</label>
+            <input type="text" class="form-control" [(ngModel)]="sondage.appart" placeholder="Numéro Appartement">
+          </div>
+
+          <div class="form-group">
+            <label>Ouverture : </label>
+            <p-selectButton [options]="open" [(ngModel)]="sondage.open"></p-selectButton>
+            <br><br>
+          </div>
+        </ba-card>
+
+      </div>
+
+      <div class="col-md-6">
+        <ba-card title="Priorité" baCardClass="with-scroll">
+
+          <div>
+            <p-selectButton [options]="priorite" [(ngModel)]="sondage.priorite_1"></p-selectButton>
+            <br><br>
+          </div>
+          <div>
+            <p-selectButton [options]="priorite" [(ngModel)]="sondage.priorite_2"></p-selectButton>
+            <br><br>
+          </div>
+          <div>
+            <p-selectButton [options]="priorite" [(ngModel)]="sondage.priorite_3"></p-selectButton>
+            <br><br>
+          </div>
+        </ba-card>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <ba-card title="Les élus" baCardClass="with-scroll">
+          <label>Je connais mon élu : </label>
+          <p-selectButton [options]="ouinon" [(ngModel)]="sondage.connaissance"></p-selectButton>
+          <br>
+          <label>J'ai rencontré mon élu : </label>
+          <p-selectButton [options]="ouinon" [(ngModel)]="sondage.vu_elu"></p-selectButton>
+          <br>
+          <label>Indice confiance : </label>
+          <p-rating [cancel]="false" stars=10 [(ngModel)]="sondage.confiance"></p-rating>
+          <br>
+          <label>Indice satisfaction : </label>
+          <p-rating [cancel]="false" stars=10 [(ngModel)]="sondage.satisfaction"></p-rating>
+          <br>
+
+        </ba-card>
+      </div>
+      <div class="col-md-6">
+        <ba-card title="Commentaires" baCardClass="with-scroll">
+          <div class="form-group">
+            <textarea placeholder="Default Input" class="form-control" [(ngModel)]="sondage.commentaire"></textarea>
+          </div>
+        </ba-card>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <ba-card title="Les élus" baCardClass="with-scroll">
+          <label>Acquis : </label>
+          <p-selectButton [options]="ouinon" [(ngModel)]="sondage.acquis"></p-selectButton>
+          <br>
+          <label>A revoir : </label>
+          <p-selectButton [options]="ouinon" [(ngModel)]="sondage.revoir"></p-selectButton>
+          <br>
+
+
+          <div class="button-wrapper">
             <button type="button" class="btn btn-default" (click)="onSubmit()">Enregistrer</button>
-            </div>
-
-      </ba-card>
-
+          </div>
+        </ba-card>
+      </div>
     </div>
 
-    <div class="col-md-6">
-      <ba-card title="Priorité" baCardClass="with-scroll">
-       
-       <div>
-            <p-selectButton [options]="priorite" [(ngModel)]="sondage.priorite_1"></p-selectButton><br><br>
-        </div>
-        <div>
-            <p-selectButton [options]="priorite" [(ngModel)]="sondage.priorite_2"></p-selectButton><br><br>
-        </div>
-        <div>
-            <p-selectButton [options]="priorite" [(ngModel)]="sondage.priorite_3"></p-selectButton><br><br>
-        </div>
-      </ba-card>
 
-    </div>
-    </div>
-<div class="row">
-    <div class="col-md-6">
-      <ba-card title="Les élus" baCardClass="with-scroll">
-           <label>Je connais mon élu : </label> <p-selectButton [options]="ouinon" [(ngModel)]="sondage.connaissance"></p-selectButton><br>
-      <label>J'ai rencontré mon élu : </label> <p-selectButton [options]="ouinon" [(ngModel)]="sondage.vu_elu"></p-selectButton><br>
-      <label>Indice confiance : </label> <p-rating [cancel]="false" stars=10 [(ngModel)]="sondage.confiance"></p-rating>  <br>
-      <label>Indice satisfaction : </label> <p-rating [cancel]="false" stars=10 [(ngModel)]="sondage.satisfaction"></p-rating>  <br>
-
-      </ba-card>
-    </div>
-    <div class="col-md-6">
-      <ba-card title="Commentaires" baCardClass="with-scroll">
-           <div class="form-group">
-    <textarea placeholder="Default Input" class="form-control" [(ngModel)]="sondage.commentaire"></textarea>
-  </div>
-      </ba-card>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-md-6">
- <label>Acquis : </label> <p-selectButton [options]="ouinon" [(ngModel)]="sondage.acquis"></p-selectButton><br>
-   <label>A revoir : </label> <p-selectButton [options]="ouinon" [(ngModel)]="sondage.revoir"></p-selectButton><br>
-
-
- <div class="button-wrapper">
-            <button type="button" class="btn btn-default" (click)="onSubmit()">Enregistrer</button>
-            </div>
-    </div>
-</div>
-
-
-</form>
+  </form>
 </div>

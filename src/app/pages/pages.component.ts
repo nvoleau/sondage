@@ -13,11 +13,14 @@ import {Sondage} from './sondage';
 import {Carto} from './carto';
 import {TableEnquete} from './table-enquete';
 
+import {Auth} from './auth';
+
 @Component({
   selector: 'pages',
   encapsulation: ViewEncapsulation.None,
   styles: [],
   directives: [BaPageTop, BaSidebar, BaContentTop, BaBackTop],
+  providers:[Auth],
   template: `
     <ba-sidebar></ba-sidebar>
     <ba-page-top></ba-page-top>
@@ -67,7 +70,7 @@ import {TableEnquete} from './table-enquete';
 ])
 export class Pages {
 
-  constructor() {
+  constructor(private auth:Auth) {
   }
 
   ngOnInit() {
