@@ -8,20 +8,20 @@
   </ba-card>
     <ba-card title="Sondés" class="col-xlg-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
       <div class="description">
-          <div class="description-stats">{{sonde_pourcent}}%</div>
-        <div class="description-stats">{{sonde_total}} votants</div>
+          <div class="description-stats">{{sonde_pourcent | number:'.0-2'}}%</div>
+        <div class="description-stats">{{sonde_total}} electeurs</div>
       </div>
     </ba-card>
     <ba-card title="Par moi" class="col-xlg-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
       <div class="description">
-        <div class="description-stats">{{sonde_pourcent_moi}}%</div>
-        <div class="description-stats">{{sonde_total_moi}} votants</div>
+        <div class="description-stats">{{sonde_pourcent_moi | number:'.0-2'}}%</div>
+        <div class="description-stats">{{sonde_total_moi}} electeurs</div>
       </div>
     </ba-card>
   <ba-card title="Moyenne par Militant" class="col-xlg-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
     <div class="description">
-      <div class="description-stats">{{sonde_moy}}</div>
-      <div class="description-stats">votants</div>
+      <div class="description-stats">{{sonde_moy | number:'.0-2'}}</div>
+      <div class="description-stats">electeurs</div>
     </div>
   </ba-card>
   </div>

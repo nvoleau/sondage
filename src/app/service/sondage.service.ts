@@ -22,7 +22,6 @@ getNbBy(child:string,childNode:string, recherche:string){
 
 
   getAll(){
-    //console.log(this._sondageService.nb_total);
     let ref = this.db.child("enquete");
     ref.orderByChild("owner").on("child_added").then((snapshot)=> {
       return snapshot.val();
