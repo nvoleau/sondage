@@ -42,6 +42,7 @@ export class Dashboard {
   private ref:any;
   militants = [];
   militants_nb = [];
+  militants_nb_tmp=[];
 
   constructor(private _chartistJsService:ChartistJsService, private _sondageService:SondageService, private auth:Auth) {
     this._sondageService.db.child('enquete').on('child_added', data => {
@@ -71,9 +72,14 @@ ngOnInit() {
     //notre valeur
     var x = this.militants_nb[n];
     //on classe l'array
-    this.militants_nb.sort();
+
+    this.militants_nb_tmp = this.militants_nb;
+    console.log(this.militants_nb);
+    this.militants_nb_tmp.sort();
+    console.log(this.militants_nb);
+    console.log(this.militants_nb_tmp);
     // quelle est maintenant notre place dans l'array
-    this.classement_moi = this.militants_nb.indexOf(x);
+    this.classement_moi = this.militants_nb_tmp.indexOf(x);
 
    // console.log(this.militants_nb);
 

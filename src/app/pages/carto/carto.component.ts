@@ -29,6 +29,7 @@ export class Carto {
   }
 
 getColor(d) {
+    console.log(d);
     return  d > 100 ? '#bd0026' :
             d > 80 ? '#f03b20' :
            d > 60  ? '#fd8d3c' :
@@ -38,8 +39,10 @@ getColor(d) {
 }
 
   style(feature) {
+  
     return {
-        fillColor: this.getColor(feature.properties.CHOMAGE_2012),
+        //fillColor: this.getColor(45),
+        fillColor: '#f03b20',
         weight: 2,
         opacity: 1,
         color: 'white',
@@ -199,7 +202,7 @@ L.heatLayer([[48.543801,2.642103,1],
         "CP": 77350,
         "LIBELLE": "LE MEE SUR SEINE",
 		"MENAGES_NON_IMPOSES_2010":"38",
-		"CHOMAGE_2012":"10.4"
+		"CHOMAGE_2012":10.4
       },
       "geometry": {
         "type": "Polygon",
@@ -286,7 +289,7 @@ L.heatLayer([[48.543801,2.642103,1],
         "CP": 77350,
         "LIBELLE": "LE MEE SUR SEINE",
 		"MENAGES_NON_IMPOSES_2010":"43.3",
-		"CHOMAGE_2012":"16.2"
+		"CHOMAGE_2012":16.2
       },
       "geometry": {
         "type": "Polygon",
@@ -377,7 +380,7 @@ L.heatLayer([[48.543801,2.642103,1],
         "CP": 77350,
         "LIBELLE": "LE MEE SUR SEINE",
 		"MENAGES_NON_IMPOSES_2010":"100",
-		"CHOMAGE_2012":"0"
+		"CHOMAGE_2012":0
       },
       "geometry": {
         "type": "Polygon",
@@ -472,7 +475,7 @@ L.heatLayer([[48.543801,2.642103,1],
         "CP": 77350,
         "LIBELLE": "LE MEE SUR SEINE",
 		"MENAGES_NON_IMPOSES_2010":"54.3",
-		"CHOMAGE_2012":"20.9"
+		"CHOMAGE_2012":20.9
       },
       "geometry": {
         "type": "Polygon",
@@ -531,7 +534,7 @@ L.heatLayer([[48.543801,2.642103,1],
         "CP": 77350,
         "LIBELLE": "LE MEE SUR SEINE",
 		"MENAGES_NON_IMPOSES_2010":"22.8",
-		"CHOMAGE_2012":"9"
+		"CHOMAGE_2012":9
       },
       "geometry": {
         "type": "Polygon",
@@ -646,7 +649,7 @@ L.heatLayer([[48.543801,2.642103,1],
         "CP": 77350,
         "LIBELLE": "LE MEE SUR SEINE",
 		"MENAGES_NON_IMPOSES_2010":"41.5",
-		"CHOMAGE_2012":"18.2"
+		"CHOMAGE_2012":18.2
       },
       "geometry": {
         "type": "Polygon",
@@ -729,7 +732,7 @@ L.heatLayer([[48.543801,2.642103,1],
         "CP": 77350,
         "LIBELLE": "LE MEE SUR SEINE",
 		"MENAGES_NON_IMPOSES_2010":"43.8",
-		"CHOMAGE_2012":"19"
+		"CHOMAGE_2012":19
       },
       "geometry": {
         "type": "Polygon",
@@ -788,7 +791,7 @@ L.heatLayer([[48.543801,2.642103,1],
         "CP": 77350,
         "LIBELLE": "LE MEE SUR SEINE",
 		"MENAGES_NON_IMPOSES_2010":"36.9",
-		"CHOMAGE_2012":"17.5"
+		"CHOMAGE_2012":17.5
       },
       "geometry": {
         "type": "Polygon",
@@ -879,7 +882,7 @@ L.heatLayer([[48.543801,2.642103,1],
         "CP": 77350,
         "LIBELLE": "LE MEE SUR SEINE",
 		"MENAGES_NON_IMPOSES_2010":"38.7",
-		"CHOMAGE_2012":"18.7"
+		"CHOMAGE_2012":18.7
       },
       "geometry": {
         "type": "Polygon",
@@ -918,7 +921,7 @@ L.heatLayer([[48.543801,2.642103,1],
       }
     }
   ]
-}).addTo(map);
+},{style: this.style}).addTo(map);
 
   }
 
