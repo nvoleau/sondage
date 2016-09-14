@@ -30,5 +30,21 @@ export const menuItems = [
     selected: false,
     expanded: false,
     order: 150
+  },
+   {
+    title: 'Graphiques',
+    icon: 'ion-grid',
+    component: 'Graph',
+    selected: false,
+    expanded: false,
+    order: 150
+  },
+   {
+    title: 'Suivis Militant',
+    icon: 'ion-grid',
+    component: 'GraphMilitant',
+    selected: false,
+    expanded: false,
+    order: 150
   }
 ];

@@ -3,9 +3,9 @@ import {Injectable} from '@angular/core';
 import {BaThemeConfigProvider} from '../../theme';
 
 @Injectable()
-export class ChartistJsService {
+export class GraphService {
 
-  private _data = {
+    private _data = {
     simpleLineOptions: {
       color: this._baConfig.get().colors.defaultText,
       fullWidth: true,
@@ -15,13 +15,10 @@ export class ChartistJsService {
       }
     },
     simpleLineData: {
-      labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+      labels: ['19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','101','102','104'],
       series: [
-        [20, 20, 12, 45, 50],
-        [10, 45, 30, 14, 12],
-        [34, 12, 12, 40, 50],
-        [10, 43, 25, 22, 16],
-        [3, 6, 30, 33, 43]
+        [29,99,93,117,90,119,115,98,107,118,117,117,119,95,108,124,108,107,96,99,78,87,61,77,83,94,96,80,99,75,85,99,109,109,104,108,86,116,100,90,108,110,94,94,108,95,87,81,83,95,77,61,52,52,50,39,34,49,31,46,56,55,48,42,39,38,38,26,24,36,32,20,17,12,12,12,10,14,1,4,2,2,2,1],
+        [19,131,120,121,109,135,121,86,97,97,104,91,95,94,96,94,98,85,99,86,81,84,72,102,85,68,68,73,68,74,68,66,86,92,97,74,67,96,81,85,106,86,86,79,82,65,84,67,66,52,61,55,60,36,33,36,26,33,33,27,40,15,27,26,23,26,16,18,15,14,8,13,9,8,6,4,1,2,2,2,2,0,0,0]
       ]
     },
     areaLineData: {
@@ -59,10 +56,9 @@ export class ChartistJsService {
       }
     },
     simpleBarData: {
-      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+      labels: ['Bur. 1', 'Bur. 2', 'Bur. 3', 'Bur. 4', 'Bur. 5', 'Bur. 6', 'Bur. 7', 'Bur. 8'],
       series: [
-        [15, 24, 43, 27, 5, 10, 23, 44, 68, 50, 26, 8],
-        [13, 22, 49, 22, 4, 6, 24, 46, 57, 48, 22, 4]
+        [1386, 1093, 1212, 1208, 1176, 1603, 1568, 1669]
       ]
     },
     simpleBarOptions: {
@@ -142,21 +138,21 @@ export class ChartistJsService {
       }
     },
     labelsPieData: {
-      labels: ['Acquis', 'Non Acquis'],
-      series: [60, 40]
+      labels: ['Bananas', 'Apples', 'Grapes'],
+      series: [20, 15, 40]
     },
     labelsPieOptions: {
       fullWidth: true,
       height: '300px',
       weight: '300px',
-      labelDirection: 'explode'//,
-      //labelInterpolationFnc: function (value) {
-        //return value[0];
-      //}
+      labelDirection: 'explode',
+      labelInterpolationFnc: function (value) {
+        return value[0];
+      }
     },
     simpleDonutData: {
-      labels: ['Securite', 'Education', 'Emploi','Immigration'],
-      series: [20, 25, 30,25]
+      labels: ['Bananas', 'Apples', 'Grapes'],
+      series: [20, 15, 40]
     },
     simpleDonutOptions: {
       fullWidth: true,
@@ -167,21 +163,6 @@ export class ChartistJsService {
       labelInterpolationFnc: function (value) {
         return value[0];
       }
-    }
-    ,
-    simpleDonutData_sonde: {
-      labels: ['Ouvre', 'Ouvre Pas', 'Pas Interessé'],
-      series: [20, 15, 40]
-    },
-    simpleDonutOptions_sonde: {
-      fullWidth: true,
-      donut: true,
-      height: '300px',
-      weight: '300px',
-      labelDirection: 'explode'//,
-      //labelInterpolationFnc: function (value) {
-       // return value[5];
-      //}
     }
   };
 
@@ -213,10 +194,10 @@ export class ChartistJsService {
       ['screen and (max-width: 600px)', {
         chartPadding: 0,
         labelOffset: 0,
-        //labelInterpolationFnc: function (value) {
-          //return value[0];
-        //}
+        labelInterpolationFnc: function (value) {
+          return value[0];
+        }
       }]
     ];
-  }
+  
 }

@@ -12,6 +12,9 @@ import {Tables} from './tables';
 import {Sondage} from './sondage';
 import {Carto} from './carto';
 import {TableEnquete} from './table-enquete';
+import {GraphMilitant} from './graph-militant';
+
+import {Graph} from './graph';
 
 import {Auth} from './auth';
 
@@ -66,6 +69,16 @@ import {Auth} from './auth';
     name: 'Carto',
     component: Carto,
     path: '/carto'
+  },
+  {
+    name: 'Graph',
+    component: Graph,
+    path: '/graph'
+  },
+  {
+    name: 'GraphMilitant',
+    component: GraphMilitant,
+    path: '/graph-militant'
   }
 ])
 export class Pages {
