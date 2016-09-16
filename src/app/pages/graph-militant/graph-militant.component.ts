@@ -7,8 +7,7 @@ let template = require('./graph-militant.html');
 
 @Component({
   selector: 'line-chart-demo',
-  template,
-   providers:[CHART_DIRECTIVES]
+  template
 
 })
 
