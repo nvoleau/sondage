@@ -109,11 +109,10 @@ export class GraphService {
       }]
     ],
     stackedBarData: {
-      labels: ['Quarter 1', 'Quarter 2', 'Quarter 3', 'Quarter 4'],
+      labels: ['Bur. 1', 'Bur. 2', 'Bur. 3', 'Bur. 4', 'Bur. 5', 'Bur. 6', 'Bur. 7', 'Bur. 8'],
       series: [
-        [800000, 1200000, 1400000, 1300000],
-        [200000, 400000, 500000, 300000],
-        [100000, 200000, 400000, 600000]
+        [1246,	916,	1041,	1038,	982,	1336,	1164, 1306],
+        [140,	177,	171,	170,	194,	271,	404, 363]
       ]
     },
     stackedBarOptions: {

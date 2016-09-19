@@ -6,19 +6,22 @@
           <div class="col-md-12 col-lg-4">
         
         <h5>Répartition par bureau de vote</h5>
+        <p> Répartition des habitants par bureau de vote</p>
         <ba-chartist-chart baChartistChartClass="ct-chart"
                            baChartistChartType="Bar"
                            [baChartistChartData]="data['simpleBarData']"
-                           [baChartistChartOptions]="data['simpleBarOptions']">
+                           [baChartistChartOptions]="data['simpleBarOptions']"
+                           baChartistChartLegend="True">
         </ba-chartist-chart>
 
 
           </div>
-          <div class="col-md-12 col-lg-8"><h5>Répartition par age</h5>
-            <ba-chartist-chart baChartistChartClass="ct-chart"
-                           baChartistChartType="Line"
-                           [baChartistChartData]="data['simpleLineData']"
-                           [baChartistChartOptions]="data['simpleLineOptions']">
+          <div class="col-md-12 col-lg-8"><h5>Origine</h5>
+       
+        <ba-chartist-chart baChartistChartClass="ct-chart stacked-bar"
+                           baChartistChartType="Bar"
+                           [baChartistChartData]="data['stackedBarData']"
+                           [baChartistChartOptions]="data['stackedBarOptions']">
         </ba-chartist-chart>
           </div>
           
