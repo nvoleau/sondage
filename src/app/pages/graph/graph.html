@@ -1,31 +1,10 @@
 <div class="row">
-</div><div class="row">
-    <div class="col-md-12">
-      <ba-card title="Mes statistiques" baCardClass="with-scroll">
-        <div class="row">
-          <div class="col-md-12 col-lg-4">
-        
-        <h5>Répartition par bureau de vote</h5>
-        <p> Répartition des habitants par bureau de vote</p>
-        <ba-chartist-chart baChartistChartClass="ct-chart"
-                           baChartistChartType="Bar"
-                           [baChartistChartData]="data['simpleBarData']"
-                           [baChartistChartOptions]="data['simpleBarOptions']"
-                           baChartistChartLegend="True">
-        </ba-chartist-chart>
+   <ba-card>
+  <h5>2ième tour des élections</h5>
+<p-chart type="radar" [data]="dataElection"></p-chart>
+</ba-card>
+
+    </div>
 
 
-          </div>
-          <div class="col-md-12 col-lg-8"><h5>Origine</h5>
-       
-        <ba-chartist-chart baChartistChartClass="ct-chart stacked-bar"
-                           baChartistChartType="Bar"
-                           [baChartistChartData]="data['stackedBarData']"
-                           [baChartistChartOptions]="data['stackedBarOptions']">
-        </ba-chartist-chart>
-          </div>
-          
-        </div>
-      </ba-card>
-    </div>
-    </div>
+ 

@@ -22,6 +22,7 @@ dataPieQ3:any;
 dataPieQ4:any;
 dataLineAge:any;
 dataPriorite1:any;
+options:any;
 
     
     //msgs: Message[];
@@ -164,35 +165,48 @@ dataPriorite1:any;
                 {
                     label: 'Quartier 1',
                     data: [132, 80, 120, 154, 200],
-                    fill: false,
+                    //fill: false,
+                    backgroundColor: '#4bc0c0',
                     borderColor: '#4bc0c0'
                 },
                 {
                     label: 'Quartier 2',
                      data: [14, 22, 60, 14, 20],
-                    fill: false,
+                    //fill: false,
+                    backgroundColor: 'yellow',
                     borderColor: 'yellow'
                 },
                 {
                     label: 'Quartier 3',
                      data: [74, 220, 178, 27, 176],
-                    fill: false,
+                     backgroundColor: '#532656',
                     borderColor: '#532656'
                 },
                 {
                     label: 'Quartier 4',
                      data: [34, 27, 138, 270, 16],
-                    fill: false,
+                     backgroundColor: 'green',
                     borderColor: 'green'
                 },
                 {
                     label: 'Quartier 5',
                      data: [95, 67, 234, 90, 78],
-                    fill: false,
+                     backgroundColor: 'red',
                     borderColor: 'red'
                 }
             ]
         };
+        
+            this.options= {
+        scales: {
+            yAxes: [{
+                stacked: true
+            }],
+             xAxes: [{
+                stacked: true
+            }]
+        }
+    }
 
     }
 

@@ -6,6 +6,8 @@ import {RouteConfig} from '@angular/router-deprecated';
 
 require('leaflet-map');
 require('leaflet.heat');
+
+//require('style-loader!leaflet.markercluster/dist/MarkerCluster.css');
 require('style-loader!leaflet/dist/leaflet.css');
 //var geo = require('./meesurseine.geojson');
 
@@ -954,6 +956,8 @@ var sondage = L.heatLayer([[48.543801,2.642103,1],
 [48.545635,2.638913,0.3]],{radius: 25});//.addTo(map);
 
 
+
+
 var hommeIcon = L.icon({
     iconUrl: '/assets/img/1473255394_Map-Marker-Ball-Left-Azure.png',
     iconSize:     [40, 40], // size of the icon
@@ -1830,6 +1834,7 @@ L.control.layers(baseMaps, overlayMaps).addTo(map);
 
 legend.addTo(map);
 
+  //map.addLayer(sondageCluster);
 
   }
 
