@@ -19,6 +19,7 @@ export class Graph {
 
   dataElection:any;
   ObjectURLOptions:any;
+  SVGMetadataElement:any;
 
   constructor() {
 
@@ -68,8 +69,120 @@ export class Graph {
                
             ]
         };
+
+
+        this.data = {
+            labels: ['2007 1er Tour', '2007 2ieme Tour', '1er Tour 2012', '2ieme Tour 2012'],
+            datasets: [
+                {
+                    label: 'Mairie - PS',
+                    data: [272, 465, 288, 527],
+                    fill: false,
+                    borderColor: '#4bc0c0'
+                },
+                {
+                    label: 'Mairie - UMP',
+                    data: [392, 657, 312, 541],
+                    fill: false,
+                    borderColor: 'yellow'
+                },
+                {
+                    label: 'Camus - PS',
+                    data: [243, 399, 297, 494],
+                    fill: false,
+                    borderColor: '#532656'
+                },
+                {
+                    label: 'Camus - UMP',
+                    data: [261, 442, 165, 329],
+                    fill: false,
+                    borderColor: 'green'
+                },
+                {
+                    label: 'Fenez - PS',
+                     data: [306, 505, 238, 510],
+                    fill: false,
+                    borderColor: 'red'
+                }
+                ,
+                {
+                    label: 'Fenez - UMP',
+                     data: [346, 549, 213, 395],
+                    fill: false,
+                    borderColor: 'blue'
+                }
+            ]
+        };
+
+         this.dataPieQ1 = {
+            labels: ['Joly','Le Pen', 'Sarkozy','Mélanchon','Poutou','Arthaud','Cheminade','Bayrou','Dupont-Aignan','Hollande'],
+            datasets: [
+                {
+                    data: [20, 173, 312,127,7,5,2,103,24,288],
+                    backgroundColor: [
+                        "#36A2EB",
+                        "#FF6600",
+                         "#FF6384",
+                         "#660099",
+                         "#99FF00",
+                         "#CCFF00",
+                         "#EABFFE",
+                         "#FFCC00",
+                         "#80FFFE",
+                         "#FE9980"
+                    ],
+                    hoverBackgroundColor: [
+                       "#36A2EB",
+                        "#FF6600",
+                         "#FF6384",
+                         "#660099",
+                         "#99FF00",
+                         "#CCFF00",
+                         "#EABFFE",
+                         "#FFCC00",
+                         "#80FFFE",
+                         "#FE9980"
+                    ]
+                }]    
+            };
         
+        this.dataPieQ2 = {
+            labels: ['Joly','Le Pen', 'Sarkozy','Mélanchon','Poutou','Arthaud','Cheminade','Bayrou','Dupont-Aignan','Hollande'],
+            datasets: [
+                {
+                    data: [16,155,165,108,10,4,2,46,13,297],
+                    backgroundColor: [
+                        "#36A2EB",
+                        "#FF6600",
+                         "#FF6384",
+                         "#660099",
+                         "#99FF00",
+                         "#CCFF00",
+                         "#EABFFE",
+                         "#FFCC00",
+                         "#80FFFE",
+                         "#FE9980"
+                    ],
+                    hoverBackgroundColor: [
+                       "#36A2EB",
+                        "#FF6600",
+                         "#FF6384",
+                         "#660099",
+                         "#99FF00",
+                         "#CCFF00",
+                         "#EABFFE",
+                         "#FFCC00",
+                         "#80FFFE",
+                         "#FE9980"
+                    ]
+                }]    
+            };
         
+    }
+
+     selectData(event) {
+       // this.msgs = [];
+        //this.msgs.push({severity: 'info', summary: 'Data Selected', 'detail': this.data.datasets[event.element._datasetIndex].data[event.element._index]});
     }
 
   }

@@ -50,7 +50,7 @@ export const menuItems = [
   },
    
       {      title: 'Carte intéractive',
-            url: 'http://election.pavillon30.com/map.html',
+            url: 'http://demo.mapetic.com/map.html',
             icon: 'ion-android-exit',
             order: 800,
             target: '_blank'

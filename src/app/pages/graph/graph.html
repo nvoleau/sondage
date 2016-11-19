@@ -1,10 +1,33 @@
 <div class="row">
-   <ba-card>
+
+<ba-card>
+  <h5>Résultat Elections (nombre de vois exprimées) pour le PS et UMP</h5>
+<p-chart type="line" [data]="data" (onDataSelect)="selectData($event)"></p-chart>
+</ba-card>
+  </div>
+
+ <div class="row">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+          <ba-card class="col-xlg-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5>Election présidentiel 2012 - Mairie</h5>
+            <p-chart type="pie" [data]="dataPieQ1" (onDataSelect)="selectData($event)"></p-chart>
+          </ba-card>
+
+          <ba-card class="col-xlg-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <h5>Election présidentiel 2012 - Camus</h5>
+            <p-chart type="pie" [data]="dataPieQ2" (onDataSelect)="selectData($event)"></p-chart>
+          </ba-card>
+
+        </div>
+ </div>
+
+   <!--<ba-card>
   <h5>2ième tour des élections</h5>
 <p-chart type="radar" [data]="dataElection"></p-chart>
-</ba-card>
+</ba-card>-->
 
-    </div>
+  
 
 
  

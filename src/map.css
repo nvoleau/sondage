@@ -5,6 +5,9 @@
     background : cornflowerblue;
     color: whitesmoke;
     text-align: center;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
 }
 
 .circle_f {
@@ -13,6 +16,9 @@
     line-height: 32px;
     background : pink;
     text-align: center;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
 }
 
 .circle_emploi {
@@ -22,6 +28,9 @@
     background : yellow;
     color: black;
     text-align: center;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
 }
 
 .circle_securite {
@@ -31,6 +40,9 @@
     background : blue;
     color: whitesmoke;
     text-align: center;
+    -webkit-border-radius:50px;
+    -moz-border-radius:50px;
+    border-radius:50px;
 }
 
 #map {
